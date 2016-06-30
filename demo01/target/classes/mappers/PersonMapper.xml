@@ -41,6 +41,46 @@
         INSERT INTO mybatis.person(id,name, age, birthday, address) VALUES
         (#{pid},#{pname},#{age},#{birthday},#{address})
     </insert>
+    
+    
+    <select id="dynamicSelect" parameterType="map" resultMap="baseResultMap">
+        SELECT * from person
+        <where>
+            <if test="pid !=null">
+                id=#{pid}
+            </if>
+            <if test="age !=null">
+                <![CDATA[
+            and    age<#{age}
+                ]]>
+            </if>
 
+        </where>
+    </select>
+
+
+
+    <select id="dynamicSelect1" parameterType="person" resultMap="baseResultMap">
+        SELECT * from person
+        <where>
+            <if test="pid !=0">
+                id=#{pid}
+            </if>
+            <if test="age !=null">
+                <![CDATA[
+            and    age<#{age}
+                ]]>
+            </if>
+
+        </where>
+    </select>
+
+    <insert id="dynamicInsert" parameterType="map">
+        INSERT INTO mybatis.person(id,name, age, birthday, address) VALUES
+        <foreach collection="persons" separator="," item="p">
+            (#{p.pid},#{p.pname},#{p.age},#{p.birthday},#{p.address})
+        </foreach>
+
+    </insert>
 
 </mapper>
