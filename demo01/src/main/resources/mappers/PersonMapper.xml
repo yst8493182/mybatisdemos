@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.PersonMapper">
+
+
+    <resultMap id="baseResultMap" type="net.yst.models.Person">
+        <id column="id" property="pid" javaType="integer"/>
+        <result column="name" javaType="java.lang.String" property="pname"/>
+        <result column="age" property="age" javaType="java.lang.Integer"/>
+        <result column="birthday" property="birthday" javaType="date"/>
+        <result column="address" property="address" javaType="string"/>
+
+    </resultMap>
+
+    <select id="selectAllPerson" resultMap="baseResultMap">
+        SELECT * FROM person
+    </select>
+
+    <select id="selectById" resultMap="baseResultMap" parameterType="map">
+        SELECT * FROM person WHERE  id=#{id}
+    </select>
+
+    <select id="selectByAddr" resultMap="baseResultMap" parameterType="map">
+
+        <!-- 存在 模糊查询时，需要使用${key} ,并且进行转意 -->
+        <![CDATA[
+
+                SELECT * FROM person WHERE  address LIKE ${id}
+
+        ]]>
+    </select>
+
+
+    <insert id="addPerson" parameterType="net.yst.models.Person">
+
+        <selectKey order="AFTER" keyProperty="pid" resultType="integer">
+            SELECT LAST_insert_id()
+        </selectKey>
+        INSERT INTO mybatis.person(id,name, age, birthday, address) VALUES
+        (#{pid},#{pname},#{age},#{birthday},#{address})
+    </insert>
+
+
+</mapper>
