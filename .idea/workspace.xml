@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="3de26994-35ed-4fbe-860c-46c6ffa4face" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/shutao_yang.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/demo01.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/src/main/java/net/yst/models/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/src/main/resources/mappers/PersonMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/src/main/resources/mybatis‐config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/src/test/java/net/yst/test/PersonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/src/main/resources/mappers/PersonMapper.xml" afterPath="$PROJECT_DIR$/demo01/src/main/resources/mappers/PersonMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/src/main/resources/mybatis‐config.xml" afterPath="$PROJECT_DIR$/demo01/src/main/resources/mybatis‐config.xml" />
     </list>
     <ignored path="mybatisdemos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,32 +82,32 @@
       <file leaf-file-name="mybatis‐config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo01/src/main/resources/mybatis‐config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="168">
+              <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonMapper.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersonMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo01/src/main/resources/mappers/PersonMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="384">
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
               <folding>
-                <marker date="1467195633820" expanded="true" signature="715:735" placeholder="SELECT * FRO... person" />
-                <marker date="1467195633820" expanded="true" signature="834:870" placeholder="SELECT * FRO... person" />
-                <marker date="1467195633820" expanded="true" signature="1044:1090" placeholder="SELECT * FRO... person" />
+                <marker date="1467195633820" expanded="true" signature="700:720" placeholder="SELECT * FRO... person" />
+                <marker date="1467195633820" expanded="true" signature="819:855" placeholder="SELECT * FRO... person" />
+                <marker date="1467195633820" expanded="true" signature="1029:1075" placeholder="SELECT * FRO... person" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PersonTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo01/src/test/java/net/yst/test/PersonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="304">
+              <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,7 +138,7 @@
       <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo01/src/main/java/net/yst/models/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="24">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
@@ -1051,22 +1038,16 @@
       <option name="presentableId" value="Default" />
       <updated>1467191262564</updated>
       <workItem from="1467191264159" duration="2474000" />
-      <workItem from="1467193757165" duration="2700000" />
+      <workItem from="1467193757165" duration="3519000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PersonTest_selectById - 2016.06.29 at 18h 03m 25s.xml">
-      <configuration name="PersonTest.selectById" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="PersonTest_selectById - 2016.06.29 at 18h 05m 47s.xml">
       <configuration name="PersonTest.selectById" configurationId="TestNG" />
     </history-entry>
     <history-entry file="PersonTest_selectById_(1) - 2016.06.29 at 18h 04m 25s.xml">
       <configuration name="PersonTest.selectById (1)" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PersonTest_testAddPerson - 2016.06.29 at 18h 01m 09s.xml">
-      <configuration name="PersonTest.testAddPerson" configurationId="TestNG" />
     </history-entry>
     <history-entry file="PersonTest_testAddPerson - 2016.06.29 at 18h 06m 06s.xml">
       <configuration name="PersonTest.testAddPerson" configurationId="TestNG" />
@@ -1080,18 +1061,24 @@
     <history-entry file="PersonTest_testAddPerson - 2016.06.29 at 18h 10m 07s.xml">
       <configuration name="PersonTest.testAddPerson" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PersonTest_testAddPerson_(1) - 2016.06.29 at 18h 03m 21s.xml">
-      <configuration name="PersonTest.testAddPerson (1)" configurationId="TestNG" />
+    <history-entry file="PersonTest_testAddPerson - 2016.06.30 at 09h 42m 30s.xml">
+      <configuration name="PersonTest.testAddPerson" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PersonTest_testAddPerson - 2016.06.30 at 09h 42m 59s.xml">
+      <configuration name="PersonTest.testAddPerson" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PersonTest_testAddPerson - 2016.06.30 at 09h 43m 22s.xml">
+      <configuration name="PersonTest.testAddPerson" configurationId="TestNG" />
     </history-entry>
     <history-entry file="PersonTest_testAddPerson_(2) - 2016.06.29 at 18h 08m 31s.xml">
       <configuration name="PersonTest.testAddPerson (2)" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5174000" />
+    <option name="totallyTimeSpent" value="5993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1101,9 +1088,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2793177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22925311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33091286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53838176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1163,9 +1150,9 @@
         <state relative-caret-position="696">
           <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
           <folding>
-            <marker date="1467195633820" expanded="true" signature="715:735" placeholder="SELECT * FRO... person" />
-            <marker date="1467195633820" expanded="true" signature="834:870" placeholder="SELECT * FRO... person" />
-            <marker date="1467195633820" expanded="true" signature="1044:1090" placeholder="SELECT * FRO... person" />
+            <marker date="1467195633820" expanded="true" signature="700:720" placeholder="SELECT * FRO... person" />
+            <marker date="1467195633820" expanded="true" signature="819:855" placeholder="SELECT * FRO... person" />
+            <marker date="1467195633820" expanded="true" signature="1029:1075" placeholder="SELECT * FRO... person" />
           </folding>
         </state>
       </provider>
@@ -1237,14 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/src/main/java/net/yst/models/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/MavenLocalRepository/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.jar!/org/apache/ibatis/session/SqlSession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1261,32 +1240,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/src/main/resources/mybatis‐config.xml">
+    <entry file="file://$PROJECT_DIR$/demo01/src/main/java/net/yst/models/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="24">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/src/test/java/net/yst/test/PersonTest.java">
+    <entry file="file://$PROJECT_DIR$/demo01/src/main/resources/mybatis‐config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/src/main/resources/mappers/PersonMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="384">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
           <folding>
-            <marker date="1467195633820" expanded="true" signature="715:735" placeholder="SELECT * FRO... person" />
-            <marker date="1467195633820" expanded="true" signature="834:870" placeholder="SELECT * FRO... person" />
-            <marker date="1467195633820" expanded="true" signature="1044:1090" placeholder="SELECT * FRO... person" />
+            <marker date="1467195633820" expanded="true" signature="700:720" placeholder="SELECT * FRO... person" />
+            <marker date="1467195633820" expanded="true" signature="819:855" placeholder="SELECT * FRO... person" />
+            <marker date="1467195633820" expanded="true" signature="1029:1075" placeholder="SELECT * FRO... person" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/src/test/java/net/yst/test/PersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

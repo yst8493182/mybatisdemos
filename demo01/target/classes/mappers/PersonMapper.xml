@@ -5,7 +5,7 @@
 <mapper namespace="mappers.PersonMapper">
 
 
-    <resultMap id="baseResultMap" type="net.yst.models.Person">
+    <resultMap id="baseResultMap" type="person">
         <id column="id" property="pid" javaType="integer"/>
         <result column="name" javaType="java.lang.String" property="pname"/>
         <result column="age" property="age" javaType="java.lang.Integer"/>
@@ -22,14 +22,25 @@
         SELECT * FROM person WHERE  id=#{id}
     </select>
 
+    <select id="selectByAddr" resultMap="baseResultMap" parameterType="map">
 
-    <insert id="addPerson" parameterType="net.yst.models.Person">
+        <!-- 存在 模糊查询时，需要使用${key} ,并且进行转意 -->
+        <![CDATA[
 
-    <selectKey order="AFTER" keyProperty="pid" resultType="integer">
-        SELECT LAST_insert_id()
-    </selectKey>
-        INSERT INTO mybatis.person(id,name, age, birthday, address) VALUES (#{pid},#{pname},#{age},#{birthday},#{address})
+                SELECT * FROM person WHERE  address LIKE ${id}
 
+        ]]>
+    </select>
+
+
+    <insert id="addPerson" parameterType="person">
+
+        <selectKey order="AFTER" keyProperty="pid" resultType="integer">
+            SELECT LAST_insert_id()
+        </selectKey>
+        INSERT INTO mybatis.person(id,name, age, birthday, address) VALUES
+        (#{pid},#{pname},#{age},#{birthday},#{address})
     </insert>
 
-    </mapper>
+
+</mapper>

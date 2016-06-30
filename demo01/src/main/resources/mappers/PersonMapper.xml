@@ -5,7 +5,7 @@
 <mapper namespace="mappers.PersonMapper">
 
 
-    <resultMap id="baseResultMap" type="net.yst.models.Person">
+    <resultMap id="baseResultMap" type="person">
         <id column="id" property="pid" javaType="integer"/>
         <result column="name" javaType="java.lang.String" property="pname"/>
         <result column="age" property="age" javaType="java.lang.Integer"/>
@@ -33,7 +33,7 @@
     </select>
 
 
-    <insert id="addPerson" parameterType="net.yst.models.Person">
+    <insert id="addPerson" parameterType="person">
 
         <selectKey order="AFTER" keyProperty="pid" resultType="integer">
             SELECT LAST_insert_id()
