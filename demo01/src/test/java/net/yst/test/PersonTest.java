@@ -111,4 +111,35 @@ public class PersonTest {
 
     }
 
+
+
+
+
+    /**
+     * 动态sql 删除数据
+     */
+    @Test
+    public void dynamicDelete() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        Map<String, List<Integer>> map = new HashMap<>();
+        List<Integer> ids = new ArrayList<>();
+        map.put("ids", ids);
+        for(int i = 150; i <200 ; i++) {
+            ids.add(i);
+            if (i % 10 == 0) {
+                sqlSession.insert("mappers.PersonMapper.dynamicDelete", map);
+                ids.clear();
+            }
+        }
+
+        sqlSession.insert("mappers.PersonMapper.dynamicDelete", map);
+        sqlSession.commit();
+        sqlSession.close();
+
+    }
+
+
+
+
 }

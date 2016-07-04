@@ -83,4 +83,13 @@
 
     </insert>
 
+
+    <delete id="dynamicDelete" parameterType="map">
+        DELETE FROM person WHERE id IN
+        <foreach collection="ids" separator="," item="id" open="(" close=")">
+            #{id}
+        </foreach>
+
+    </delete>
+
 </mapper>
