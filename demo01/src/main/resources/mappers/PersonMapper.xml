@@ -92,4 +92,17 @@
 
     </delete>
 
+
+    <update id="dynaemicUpate" parameterType="person">
+       UPDATE person
+       <set>
+           <if test="pid!=null ">id=#{pid},</if>
+           <if test="pname!=null">name=#{pname},</if>
+           <if test="age!=null and age!=0">age=#{age},</if> <!-- 存在且条件时，用and连接-->
+           <if test="birthday!=null">birthday=#{birthday},</if>
+           <if test="address!=null">address=#{address},</if>
+       </set>
+        where id=#{pid}
+    </update>
+
 </mapper>

@@ -140,6 +140,17 @@ public class PersonTest {
     }
 
 
+    @Test
+    public void dynaemicUpate() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        Person person = new Person();
+        person.setPid(1);
+        person.setAge(100);
 
+        sqlSession.insert("mappers.PersonMapper.dynaemicUpate", person);
+        sqlSession.commit();
+        sqlSession.close();
+
+    }
 
 }
