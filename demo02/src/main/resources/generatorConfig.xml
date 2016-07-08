@@ -42,9 +42,9 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table domainObjectName="Person" tableName="person">
+        <table domainObjectName="Role" tableName="role"/>
+        <table domainObjectName="PersonRole" tableName="personrole"/>
 
-        </table>
 
     </context>
 </generatorConfiguration>

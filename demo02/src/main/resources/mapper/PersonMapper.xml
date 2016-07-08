@@ -202,15 +202,57 @@
             <id column="id" jdbcType="INTEGER" property="id"/>
             <result column="pid" jdbcType="INTEGER" property="pid"/>
             <result column="total" jdbcType="REAL" property="total"/>
+
+
         </collection>
+    </resultMap>
 
 
+    <resultMap id="PersonOrderProductMapper" type="net.yst.models.Person" extends="BaseResultMap">
+        <collection property="ordersList" ofType="net.yst.models.Orders" javaType="list">
+            <id column="id" jdbcType="INTEGER" property="id"/>
+            <result column="pid" jdbcType="INTEGER" property="pid"/>
+            <result column="total" jdbcType="REAL" property="total"/>
+
+            <collection property="products" ofType="net.yst.models.Product" javaType="list" column="oid">
+                <id column="productid" jdbcType="INTEGER" property="productid"/>
+                <result column="name" jdbcType="VARCHAR" property="name"/>
+                <result column="price" jdbcType="INTEGER" property="price"/>
+                <result column="oid" jdbcType="INTEGER" property="oid"/>
+
+            </collection>
+
+
+        </collection>
     </resultMap>
 
 
     <select id="selectPersonById" parameterType="integer" resultMap="PersonOrderMapper">
-SELECT * FROM Person p ,orders o where p.pid=o.pid AND p.pid=#{pid}
+        SELECT * FROM Person p ,orders o where p.pid=o.pid AND p.pid=#{pid}
   </select>
+
+
+    <select id="selectPersonOrderProductById" parameterType="integer" resultMap="PersonOrderProductMapper">
+SELECT * FROM person p,orders o,product pr WHERE o.id=pr.oid AND p.pid=o.pid AND p.pid=#{pid};
+    </select>
+
+
+    <resultMap id="PersonRoleMapper" type="net.yst.models.Person" extends="BaseResultMap">
+
+        <collection property="roleList" ofType="net.yst.models.Role">
+            <id column="roleid" jdbcType="INTEGER" property="roleid"/>
+            <result column="rolename" jdbcType="VARCHAR" property="rolename"/>
+            <result column="roledesc" jdbcType="VARCHAR" property="roledesc"/>
+        </collection>
+    </resultMap>
+
+
+    <select id="selectPersonRole" parameterType="integer" resultMap="PersonRoleMapper">
+
+        select * from mybatis.person p,mybatis.personrole pr,mybatis.role r
+        WHERE  p.pid=pr.personid AND r.roleid=pr.roleid AND p.pid=#{pid};
+
+    </select>
 
 
 </mapper>

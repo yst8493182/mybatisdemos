@@ -1,6 +1,7 @@
 package net.yst.models;
 
 import java.util.Date;
+import java.util.List;
 
 public class Person {
     private Integer pid;
@@ -10,6 +11,26 @@ public class Person {
     private Integer age;
 
     private Date birthday;
+
+    private List<Orders> ordersList;
+
+    private List<Role> roleList;
+
+    public List<Role> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<Role> roleList) {
+        this.roleList = roleList;
+    }
+
+    public List<Orders> getOrdersList() {
+        return ordersList;
+    }
+
+    public void setOrdersList(List<Orders> ordersList) {
+        this.ordersList = ordersList;
+    }
 
     public Integer getPid() {
         return pid;
@@ -41,5 +62,17 @@ public class Person {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "pid=" + pid +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", birthday=" + birthday +
+                ", ordersList=" + ordersList +
+                '}';
     }
 }
