@@ -11,6 +11,9 @@ public class Orders {
 
     private List<Product> products;
 
+
+    private Person person;
+
     public List<Product> getProducts() {
         return products;
     }
@@ -43,6 +46,13 @@ public class Orders {
         this.total = total;
     }
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
     @Override
     public String toString() {

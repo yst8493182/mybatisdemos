@@ -228,7 +228,7 @@
 
 
     <select id="selectPersonById" parameterType="integer" resultMap="PersonOrderMapper">
-        SELECT * FROM Person p ,orders o where p.pid=o.pid AND p.pid=#{pid}
+        SELECT * FROM Person p  where  p.pid=#{pid}
   </select>
 
 
@@ -251,6 +251,42 @@ SELECT * FROM person p,orders o,product pr WHERE o.id=pr.oid AND p.pid=o.pid AND
 
         select * from mybatis.person p,mybatis.personrole pr,mybatis.role r
         WHERE  p.pid=pr.personid AND r.roleid=pr.roleid AND p.pid=#{pid};
+
+    </select>
+
+
+
+    <resultMap id="PersonIdNoMap" type="net.yst.models.Person" extends="BaseResultMap">
+
+        <association property="idNo" javaType="net.yst.models.IdNo">
+            <id column="pid" jdbcType="INTEGER" property="pid" />
+            <result column="cardno" jdbcType="CHAR" property="cardno" />
+
+        </association>
+
+    </resultMap>
+
+
+    
+    <select id="selectPersonIdNo" parameterType="integer" resultMap="PersonIdNoMap">
+
+        SELECT * FROM person p ,idno i where p.pid=i.pid and p.pid=#{pid}
+
+    </select>
+
+
+    <!--延迟加载-->
+    <resultMap id="person" type="net.yst.models.Person" extends="BaseResultMap">
+        <collection property="ordersList" column="pid" select="net.yst.dao.OrdersMapper.selectOrdersByPid">
+
+        </collection>
+
+    </resultMap>
+
+
+    <select id="selectPersonByIdLazy" parameterType="integer" resultMap="person">
+
+        select * from person where pid=#{pid};
 
     </select>
 

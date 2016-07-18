@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="net.yst.dao.PersonMapper">
-    <resultMap id="BaseResultMap" type="net.yst.models.Person">
+<mapper namespace="net.yst.dao.IdNoMapper">
+    <resultMap id="BaseResultMap" type="net.yst.models.IdNo">
         <id column="pid" jdbcType="INTEGER" property="pid"/>
-        <result column="name" jdbcType="VARCHAR" property="name"/>
-        <result column="age" jdbcType="INTEGER" property="age"/>
-        <result column="birthday" jdbcType="DATE" property="birthday"/>
+        <result column="cardno" jdbcType="CHAR" property="cardno"/>
     </resultMap>
     <sql id="Example_Where_Clause">
         <where>
@@ -68,15 +66,15 @@
         </where>
     </sql>
     <sql id="Base_Column_List">
-    pid, name, age, birthday
+    pid, cardno
   </sql>
-    <select id="selectByExample" parameterType="net.yst.models.PersonExample" resultMap="BaseResultMap">
+    <select id="selectByExample" parameterType="net.yst.models.IdNoExample" resultMap="BaseResultMap">
         select
         <if test="distinct">
             distinct
         </if>
         <include refid="Base_Column_List"/>
-        from person
+        from idno
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>
@@ -87,76 +85,56 @@
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from person
+        from idno
         where pid = #{pid,jdbcType=INTEGER}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from person
+    delete from idno
     where pid = #{pid,jdbcType=INTEGER}
   </delete>
-    <delete id="deleteByExample" parameterType="net.yst.models.PersonExample">
-        delete from person
+    <delete id="deleteByExample" parameterType="net.yst.models.IdNoExample">
+        delete from idno
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
-    <insert id="insert" parameterType="net.yst.models.Person">
-    insert into person (pid, name, age, 
-      birthday)
-    values (#{pid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
-      #{birthday,jdbcType=DATE})
+    <insert id="insert" parameterType="net.yst.models.IdNo">
+    insert into idno (pid, cardno)
+    values (#{pid,jdbcType=INTEGER}, #{cardno,jdbcType=CHAR})
   </insert>
-    <insert id="insertSelective" parameterType="net.yst.models.Person">
-        insert into person
+    <insert id="insertSelective" parameterType="net.yst.models.IdNo">
+        insert into idno
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="pid != null">
                 pid,
             </if>
-            <if test="name != null">
-                name,
-            </if>
-            <if test="age != null">
-                age,
-            </if>
-            <if test="birthday != null">
-                birthday,
+            <if test="cardno != null">
+                cardno,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="pid != null">
                 #{pid,jdbcType=INTEGER},
             </if>
-            <if test="name != null">
-                #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="age != null">
-                #{age,jdbcType=INTEGER},
-            </if>
-            <if test="birthday != null">
-                #{birthday,jdbcType=DATE},
+            <if test="cardno != null">
+                #{cardno,jdbcType=CHAR},
             </if>
         </trim>
     </insert>
-    <select id="countByExample" parameterType="net.yst.models.PersonExample" resultType="java.lang.Integer">
-        select count(*) from person
+    <select id="countByExample" parameterType="net.yst.models.IdNoExample" resultType="java.lang.Integer">
+        select count(*) from idno
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>
     </select>
     <update id="updateByExampleSelective" parameterType="map">
-        update person
+        update idno
         <set>
             <if test="record.pid != null">
                 pid = #{record.pid,jdbcType=INTEGER},
             </if>
-            <if test="record.name != null">
-                name = #{record.name,jdbcType=VARCHAR},
-            </if>
-            <if test="record.age != null">
-                age = #{record.age,jdbcType=INTEGER},
-            </if>
-            <if test="record.birthday != null">
-                birthday = #{record.birthday,jdbcType=DATE},
+            <if test="record.cardno != null">
+                cardno = #{record.cardno,jdbcType=CHAR},
             </if>
         </set>
         <if test="_parameter != null">
@@ -164,53 +142,42 @@
         </if>
     </update>
     <update id="updateByExample" parameterType="map">
-        update person
+        update idno
         set pid = #{record.pid,jdbcType=INTEGER},
-        name = #{record.name,jdbcType=VARCHAR},
-        age = #{record.age,jdbcType=INTEGER},
-        birthday = #{record.birthday,jdbcType=DATE}
+        cardno = #{record.cardno,jdbcType=CHAR}
         <if test="_parameter != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
     </update>
-    <update id="updateByPrimaryKeySelective" parameterType="net.yst.models.Person">
-        update person
+    <update id="updateByPrimaryKeySelective" parameterType="net.yst.models.IdNo">
+        update idno
         <set>
-            <if test="name != null">
-                name = #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="age != null">
-                age = #{age,jdbcType=INTEGER},
-            </if>
-            <if test="birthday != null">
-                birthday = #{birthday,jdbcType=DATE},
+            <if test="cardno != null">
+                cardno = #{cardno,jdbcType=CHAR},
             </if>
         </set>
         where pid = #{pid,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="net.yst.models.Person">
-    update person
-    set name = #{name,jdbcType=VARCHAR},
-      age = #{age,jdbcType=INTEGER},
-      birthday = #{birthday,jdbcType=DATE}
+    <update id="updateByPrimaryKey" parameterType="net.yst.models.IdNo">
+    update idno
+    set cardno = #{cardno,jdbcType=CHAR}
     where pid = #{pid,jdbcType=INTEGER}
   </update>
 
 
-    <resultMap id="PersonOrderMapper" type="net.yst.models.Person" extends="BaseResultMap">
-        <collection property="ordersList" ofType="net.yst.models.Orders">
-            <id column="id" jdbcType="INTEGER" property="id"/>
-            <result column="pid" jdbcType="INTEGER" property="pid"/>
-            <result column="total" jdbcType="REAL" property="total"/>
-        </collection>
+    <resultMap id="IdNoPersonMap" type="net.yst.models.IdNo" extends="BaseResultMap">
 
+        <association property="person" javaType="net.yst.models.Person">
 
+            <id column="pid" jdbcType="INTEGER" property="pid"/>
+            <result column="name" jdbcType="VARCHAR" property="name"/>
+            <result column="age" jdbcType="INTEGER" property="age"/>
+            <result column="birthday" jdbcType="DATE" property="birthday"/>
+        </association>
     </resultMap>
 
-
-    <select id="selectPersonById" parameterType="integer" resultMap="PersonOrderMapper">
-SELECT * FROM Person p ,orders o where p.pid=o.pid AND p.pid=#{pid}
-  </select>
-
+    <select id="selectIdNoPerson" resultMap="IdNoPersonMap" parameterType="integer">
+      SELECT * FROM person p ,idno i where p.pid=i.pid and i.pid=#{pid}
+    </select>
 
 </mapper>

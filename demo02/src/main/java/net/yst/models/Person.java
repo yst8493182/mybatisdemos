@@ -16,6 +16,16 @@ public class Person {
 
     private List<Role> roleList;
 
+    private IdNo idNo;
+
+    public IdNo getIdNo() {
+        return idNo;
+    }
+
+    public void setIdNo(IdNo idNo) {
+        this.idNo = idNo;
+    }
+
     public List<Role> getRoleList() {
         return roleList;
     }
