@@ -166,6 +166,40 @@ public class PersonTest {
     }
 
 
+    /**
+     * 启用二级缓存后，不同Session之间的缓存可以共用
+     */
+    @Test
+    public void selectPersonByid() {
+        SqlSession sqlSession = null;
+
+        SqlSession sqlSession1 = null;
+        try {
+            sqlSession = sqlSessionFactory.openSession();
+
+            Person person=sqlSession.selectOne("net.yst.dao.PersonMapper.selectPersonById", 1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            sqlSession.close();
+
+        }
+        try {
+            sqlSession1 = sqlSessionFactory.openSession();
+
+            Person person1=sqlSession1.selectOne("net.yst.dao.PersonMapper.selectPersonById", 1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            sqlSession1.close();
+
+        }
+
+
+
+
+
+    }
 
 
 

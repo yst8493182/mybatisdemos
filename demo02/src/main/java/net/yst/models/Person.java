@@ -2,8 +2,12 @@ package net.yst.models;
 
 import java.util.Date;
 import java.util.List;
+import java.io.Serializable;
 
-public class Person {
+public class Person  implements Serializable{
+
+
+    private static final long serialVersionUID = 4404882079370537607L;
     private Integer pid;
 
     private String name;

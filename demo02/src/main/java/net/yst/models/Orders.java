@@ -1,8 +1,10 @@
 package net.yst.models;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Orders {
+public class Orders implements Serializable {
+    private static final long serialVersionUID = 2567646395162008978L;
     private Integer id;
 
     private Integer pid;
